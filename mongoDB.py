@@ -1,5 +1,9 @@
+from xml.sax.handler import property_interning_dict
+
 import pymongo #llibary
 import datetime
+
+from requests import delete
 
 #connection string
 Client = pymongo.MongoClient("mongodb+srv://srinivasan:4FOEjoiP6kFsvRAr@pythonfordatabases.xj9xzln.mongodb.net/?retryWrites=true&w=majority&appName=PythonForDatabases")
@@ -7,7 +11,7 @@ Client = pymongo.MongoClient("mongodb+srv://srinivasan:4FOEjoiP6kFsvRAr@pythonfo
 #database
 hockeydb = Client["hockeyleage"]
 
-#table
+#table or collection
 playerstb = hockeydb["players"]
 
 #single row
@@ -53,3 +57,35 @@ listMany = [
 
 #insert many
 #ins2 = playerstb.insert_many(listMany)
+
+#selecting one row
+#print(playerstb.find_one())
+
+#selecting multiple rows
+#for i in playerstb.find().limit(1):
+#    print(i)
+
+
+#select with where clause
+#where = {'goals' : 16}
+
+#for i in playerstb.find(where):
+#    print(i)
+
+
+#update in mongoDB (easy)
+#where = {'nationality' : 'USA'}
+#update = {"$set" : {'team_id' : 10}}
+
+#a = playerstb.update_many(where,update)
+
+#for  i in playerstb.find():
+#    print(i)
+
+#deleting a row in mongoDB
+deletee = {'goals' : 16}
+
+a = playerstb.delete_many(deletee)
+
+for i in playerstb.find():
+    print(i)

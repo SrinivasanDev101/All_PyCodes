@@ -19,10 +19,15 @@ print('opened database sucessfully')
 #conn.commit()
 #print('records added sucesssfully')
 
-a = conn.execute("select Price from orders;")
-for i in a:
-    print('col name:' + i)
-
 #conn.execute("update orders set CustomerName = 'pam' where CustomerID = 301;")
 #conn.commit()
 #print(str(conn.total_changes) + ': total changes no')
+
+
+conn.execute('delete from orders where CustomerID = 101;')
+conn.commit()
+
+a = conn.execute("select * from orders;")
+for i in a:
+    print(i)
+

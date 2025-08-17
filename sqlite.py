@@ -19,7 +19,7 @@ print('opened database sucessfully')
 #conn.commit()
 #print('records added sucesssfully')
 
-a = conn.execute("select * from orders;")
+a = conn.execute("select Price from orders;")
 for i in a:
     print(i)
 

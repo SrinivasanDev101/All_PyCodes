@@ -21,7 +21,7 @@ print('opened database sucessfully')
 
 a = conn.execute("select Price from orders;")
 for i in a:
-    print(i +'yes')
+    print('col name:' + i)
 
 #conn.execute("update orders set CustomerName = 'pam' where CustomerID = 301;")
 #conn.commit()

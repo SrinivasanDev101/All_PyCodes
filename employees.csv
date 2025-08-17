@@ -1,0 +1,9 @@
+EmployeeID,Name,Department,Age,Salary,JoinDate,PerformanceScore
+101,Alice,HR,29,55000,2019-03-15,8.5
+102,Bob,Engineering,35,72000,2018-07-22,9.1
+103,Charlie,Marketing,41,68000,2020-01-10,7.8
+104,Diana,Engineering,28,75000,2021-05-05,9.3
+105,Ethan,HR,33,60000,2017-11-30,8.0
+106,Fiona,Sales,26,52000,2022-02-14,7.5
+107,George,Marketing,38,64000,2016-08-19,8.2
+108,Hannah,Sales,31,58000,2020-09-01,7.9

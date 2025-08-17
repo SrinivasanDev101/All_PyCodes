@@ -4,4 +4,4 @@ a = [1,2,3]
 
 df = pd.DataFrame(a)
 
-print(df)
+print(df.head())
